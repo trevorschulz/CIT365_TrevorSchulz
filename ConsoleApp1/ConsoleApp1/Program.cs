@@ -15,7 +15,8 @@ namespace ConsoleApp1
             string name = "Trevor";
             string place = "Utah";
             var date = DateTime.Now;
-            Console.WriteLine("My name is {0}! I am from {1}.", name, place);
+            Console.WriteLine("My name is {0}!", name);
+            Console.WriteLine("I am from {0}.",place);
             Console.WriteLine("Today is {0}, the date is {1:MMM-dd-yyyy}",date.DayOfWeek, date);
 
             //Calculate days until Christmas 2020
@@ -41,6 +42,7 @@ namespace ConsoleApp1
             woodLength + " feet");
             Console.WriteLine("The area of the glass is " +
             glassArea + " square metres");
+            Console.WriteLine("Press enter to exit the program");
             Console.ReadLine();
         }
     }
