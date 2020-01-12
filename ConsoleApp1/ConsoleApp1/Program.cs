@@ -4,19 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            //Store name and place to variables, then display them using string interpolation
+            string name = "Trevor";
+            string place = "Utah";
+            var date = DateTime.Now;
+            Console.WriteLine("My name is {0}! I am from {1}.", name, place);
+            Console.WriteLine("Today is {0}, the date is {1:MMM-dd-yyyy}",date.DayOfWeek, date);
 
-            Console.Write("What is your favorite Color?");
+            //Calculate days until Christmas 2020
+            DateTime endTime = new DateTime(2020, 12, 25, 0, 0, 0);
+            TimeSpan ts = endTime.Subtract(DateTime.Now);
+            Console.WriteLine("There are {0:dd} days until Christmas 2020", ts);
 
-            var respone = Console.ReadLine();
+            // Paste the code from 2.1 in the C# Programming Yellow Book
+            // Add Text labels to input
+            //Add pause so program doesn't close when complete
 
-            Console.Write("You said your favorite color was " + respone + ".");
-
+            double width, height, woodLength, glassArea;
+            string widthString, heightString;
+            Console.WriteLine("What is the width of your box in meters?");
+            widthString = Console.ReadLine();
+            width = double.Parse(widthString);
+            Console.WriteLine("What is the height of your box in meters?");
+            heightString = Console.ReadLine();
+            height = double.Parse(heightString);
+            woodLength = 2 * (width + height) * 3.25;
+            glassArea = 2 * (width * height);
+            Console.WriteLine("The length of the wood is " +
+            woodLength + " feet");
+            Console.WriteLine("The area of the glass is " +
+            glassArea + " square metres");
             Console.ReadLine();
         }
     }
