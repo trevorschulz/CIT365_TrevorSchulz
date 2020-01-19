@@ -12,6 +12,7 @@ namespace MathQuiz
 {
     public partial class Form1 : Form
     {
+
         // Create a Random object called randomizer 
         // to generate random numbers.
         Random randomizer = new Random();
@@ -40,12 +41,16 @@ namespace MathQuiz
         // remaining time.
         int timeLeft;
 
+
         /// <summary>
         /// Start the quiz by filling in all of the problems
         /// and starting the timer.
         /// </summary>
         public void StartTheQuiz()
         {
+            //Show date in top left corner
+            dateLabel.Text = DateTime.Now.ToString("dd MMM yyyy");
+
             // Fill in the addition problem.
             // Generate two random numbers to add.
             // Store the values in the variables 'addend1' and 'addend2'.
@@ -84,6 +89,7 @@ namespace MathQuiz
             dividedLeftLabel.Text = dividend.ToString();
             dividedRightLabel.Text = divisor.ToString();
             quotient.Value = 0;
+
 
             // Start the timer.
             timeLeft = 30;
@@ -182,6 +188,11 @@ namespace MathQuiz
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_Click(object sender, EventArgs e)
         {
 
         }
